@@ -1,15 +1,82 @@
 <div class="fluid-container">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            Hardware
-        </div>
-    </div>
-  
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
+      <h3>Hardware</h3>
+      <p>Below is our budget for the entire project and budget for making our robot yourself. You can also find the parts we
+        used below. Our robot also features a custom made printed circuit board (PCB) to house an incredible design meant
+        for compactness and completeness. The pie chart does not include other wires, solder, capacitors, resistors, and other small parts.
+      </p>
+    </div>
+  </div>
 
-      <div class="row">
-  
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8 falcon_simple_white_bg">
+        <h4>Pie Chart "Unit" Cost</h4>
+        <p>This pie chart is the costs of parts to make one robot of ours.</p>
+        <div>
+            <div *ngIf="chart" [hidden]="!chart">
+                <canvas id="budgetChart">{{ chart }}</canvas>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-4 falcon_simple_white_bg">
+        <h4>Project Budget Breakdown:</h4>
+        <p>Maximum Budget: $500 USD</p>
+        <div>
+          <b>Total Cost of 1 Unit:</b>  ${{ComputedPriceForOne | number:'3.2-2' }} USD
+        </div>
       </div>
     </div>
-  
+
+    <br>
+
+    <div *ngFor="let part of partsArray;">
+
+      <div class="row">
+        <div class="col-lg-5 falcon_simple_white_bg">
+          <h4>{{part.title}} x{{part.quantity}}</h4>
+          <p>{{part.subtitle}}</p>
+
+          <button type="button" class="btn btn-toolbar" (click)="openModal(modalOpen)">
+            <img class="falcon-img-thumbnail " src="{{part.image}}" alt="">
+          </button>
+
+        </div>
+
+        <div class="col-lg-7 falcon_simple_black_bg">
+          <h4>{{part.secondTitle}}</h4>
+          <hr>
+          <p>Price For One: ${{part.price}} | Price x Quantity : ${{ part.quantity * part.price | number:'2.2-2' }}</p>
+          <p>{{part.specs}}</p>
+          <p>{{part.why}}</p>
+        </div>
+
+        <ng-template #modalOpen>
+          <div class="modal-header">
+            <h4 class="modal-title pull-left">{{part.subtitle}}</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="left">
+              <img class="img-responsive-height falcon-modal-img" src="{{part.image}}" alt="">
+            </div>
+            <div class="right">
+              <br>
+              <h5>{{part.modelDescription}}</h5>
+            </div>
+          </div>
+        </ng-template>
+
+      </div>
+      <br>
+    </div>
+    <br>
+
+
   </div>
+
+</div>

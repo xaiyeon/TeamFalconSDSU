@@ -1,16 +1,55 @@
 <div class="fluid-container">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-          Work
-      </div>
-      
-    </div>
-  
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
+      <h3>Work</h3>
+      <p>Here you will find the work and documentation of Team Falcon's journey in assembling and creating the robot.</p>
+    </div>
 
-      <div class="row">
-  
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="falcon_simple_white_bg">
+
+          <h4>Documented Work</h4>
+          <p>To the right side or below if you are on mobile are
+            pictures of Team Falcon working from most recent to less recent. This means
+            the pictures are in reversed order. So going left means going to recent and going right
+            means going to less recent.
+          </p>
+          <hr>
+          <h4>
+            Proposal Drafts
+          </h4>
+          <span>
+            <p>Here is our first proposal draft for our project:</p>
+            <a href="../../../assets/documents/proposals/Team_Falcon_RoughDraf-Proposal_v1.0.0.pdf">First Draft</a>
+          </span>
+          <hr>
+      </div>
+      <br>
+      <div class="falcon_simple_white_bg">
+        <h4>
+          Videos
+        </h4>
+      </div>
+      </div>
+      <div class="col-lg-6 falcon_simple_white_bg">
+        <div>
+          <ks-modal-gallery [plainGalleryConfig]="plainGalleryColumn" [modalImages]="ReversedImage" [slideConfig]="{infinite: true, sidePreviews: {show: true, size: {width: '100px', height: 'auto'}}}"></ks-modal-gallery>
+        </div>
       </div>
     </div>
-  
+
+    <br>
+    <!-- <div>
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" (onOpen)="galleryOpened($event)" (onClose)="galleryClosed()"
+        (onImageClicked)="galleryImageClicked($event)" (onImageChange)="galleryImageChanged($event)"></ngx-gallery>
+    </div> -->
+
+
   </div>
+
+</div>

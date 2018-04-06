@@ -18,6 +18,13 @@ import { SoftwareComponent } from './_static/software/software.component';
 import { AboutComponent } from './_static/about/about.component';
 import { WorkComponent } from './_static/work/work.component';
 
+import { ModalModule } from 'ngx-bootstrap';
+
+import 'hammerjs'; // <------ mandatory dependency for angular-modal-gallery
+import 'mousetrap'; // <------ mandatory dependency for angular-modal-gallery
+import { ModalGalleryModule } from 'angular-modal-gallery';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,7 @@ import { WorkComponent } from './_static/work/work.component';
     HardwareComponent,
     SoftwareComponent,
     AboutComponent,
-    WorkComponent
+    WorkComponent,
 
   ],
   imports: [
@@ -36,6 +43,8 @@ import { WorkComponent } from './_static/work/work.component';
     RouterModule.forRoot(appRoutes),
     MDBBootstrapModule.forRoot(),
     NgxGalleryModule,
+    ModalModule.forRoot(),
+    ModalGalleryModule.forRoot(),
 
 
   ],

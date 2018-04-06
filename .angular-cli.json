@@ -7,7 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": ["assets", "favicon.ico"],
+      "assets": ["assets", "favicon.ico", "robots.txt", "google95891414d403fb4e.html"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -27,7 +27,8 @@
         "../node_modules/popper.js/dist/popper.js",
         "../node_modules/chart.js/dist/Chart.js",
         "../node_modules/hammerjs/hammer.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/modal-extras/js/modal-extras.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

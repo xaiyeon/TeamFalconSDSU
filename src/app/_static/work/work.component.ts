@@ -1,4 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { NgxImageGalleryComponent, GALLERY_IMAGE, GALLERY_CONF } from "ngx-image-gallery";
+
+import { NgxGalleryAnimation } from 'ngx-gallery';
+import { NgxGalleryImage } from 'ngx-gallery';
+import { NgxGalleryOptions } from 'ngx-gallery';
+import { ngxFalconImage } from '../../_models/ngx_falcon_image';
+
+import {
+  AccessibilityConfig,
+  Action,
+  AdvancedLayout,
+  ButtonEvent,
+  ButtonsConfig,
+  ButtonsStrategy,
+  ButtonType,
+  Description,
+  DescriptionStrategy,
+  DotsConfig,
+  GridLayout,
+  Image,
+  ImageModalEvent,
+  LineLayout,
+  PlainGalleryConfig,
+  PlainGalleryStrategy,
+  PreviewConfig
+} from 'angular-modal-gallery';
+
+import { ModalGalleryModule } from 'angular-modal-gallery';
 
 @Component({
   selector: 'app-work',
@@ -6,10 +36,259 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
 
-  constructor() { }
+  // get reference to gallery component
+  @ViewChild(NgxImageGalleryComponent) ngxImageGallery: NgxImageGalleryComponent;
+
+  // Our images
+  imageURLs: ngxFalconImage[];
+
+  // second images gallery
+  plainGalleryColumn: PlainGalleryConfig = {
+    strategy: PlainGalleryStrategy.COLUMN,
+    layout: new LineLayout({ width: '400px', height: 'auto' }, { length: Infinity, wrap: true }, 'flex-start')
+  };
+
+  plainGalleryGrid: PlainGalleryConfig = {
+    strategy: PlainGalleryStrategy.GRID,
+    layout: new GridLayout({ width: '200px', height: 'auto' }, { length: 3, wrap: true })
+  };
+
+// From past to present, then reversed below.
+
+  AGimages: Image[] = [
+    new Image(0, {
+        // modal
+        img: '../../../assets/images/meets/DSC_7419.jpg',
+        description: 'Our first meeting to planning victory. - Jan. 26, 2018',
+        extUrl: '../../../assets/images/meets/DSC_7419.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/meets/DSC_7419.jpg'
+      }
+    ),
+  new Image(1, {
+      // modal
+      img: '../../../assets/images/meets/DSC_7421.jpg',
+      description: 'Our first meeting with everyone. - Jan. 26, 2018',
+      extUrl: '../../../assets/images/meets/DSC_7421.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_7421.jpg'
+    }
+    ),
+  new Image(2, {
+    // modal, 1
+    img: '../../../assets/images/meets/DSC_7460.jpg',
+    description: 'The meeting where we brainstorm our design and philosophy. - Feb. 2, 2018',
+    extUrl: '../../../assets/images/meets/DSC_7460.jpg'
+  }, {
+    // plain
+    img: '../../../assets/images/meets/DSC_7460.jpg'
+  }
+    ),
+  new Image(3, {
+      // modal
+      img: '../../../assets/images/meets/DSC_7465.jpg',
+      description: 'The meeting of finalizing some designs. - Feb. 9, 2018',
+      extUrl: '../../../assets/images/meets/DSC_7465.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_7465.jpg'
+    }
+    ),
+    new Image(4, {
+      // modal, 2,16
+      img: '../../../assets/images/meets/DSC_7484.jpg',
+      description: 'Our designers are happy. - Feb. 16, 2018',
+      extUrl: '../../../assets/images/meets/DSC_7484.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_7484.jpg'
+    }
+    ),
+    new Image(5, {
+      // modal, 2,23
+      img: '../../../assets/images/meets/DSC_7488.jpg',
+      description: 'A meeting for finalizing our part orders and more. - Feb. 23, 2018',
+      extUrl: '../../../assets/images/meets/DSC_7488.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_7488.jpg'
+    }
+    ),
+    new Image(6, {
+      // modal, 3,2
+      img: '../../../assets/images/meets/DSC_0007.jpg',
+      description: 'We have a meeting in the lab and putting things together! - Mar. 2, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0007.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0007.jpg'
+    }
+    ),
+    new Image(7, {
+      // modal, 3,2
+      img: '../../../assets/images/meets/DSC_0009.jpg',
+      description: 'Our designer and PCB layout designer posing with The Falcon! - Mar. 2, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0009.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0009.jpg'
+    }
+    ),
+    new Image(8, {
+      // modal, 3,2
+      img: '../../../assets/images/meets/DSC_0011.jpg',
+      description: 'Additional testing with variety of sensors. - Mar. 2, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0011.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0011.jpg'
+    }
+    ),
+    new Image(9, {
+      // modal, 3,5
+      img: '../../../assets/images/meets/DSC_0018.jpg',
+      description: 'Team Falcon gets ready to deliver a killer presentation. - Mar. 5, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0018.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0018.jpg'
+    }
+    ),
+    new Image(10, {
+      // modal, 3,5
+      img: '../../../assets/images/meets/DSC_0020.jpg',
+      description: 'Our programmer having a chill time writing code and testing. - Mar. 5, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0020.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0020.jpg'
+    }
+    ),
+    new Image(11, {
+      // modal, 3,9
+      img: '../../../assets/images/meets/DSC_0021.jpg',
+      description: 'A meeting discussing design #2. - Mar. 9, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0021.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0021.jpg'
+    }
+    ),
+    new Image(12, {
+      // modal, 3,9
+      img: '../../../assets/images/meets/DSC_0025.jpg',
+      description: 'Another meeting in the lab working on design #2! - Mar. 9, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0025.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0025.jpg'
+    }
+    ),
+    new Image(13, {
+      // modal, 3,9
+      img: '../../../assets/images/meets/DSC_0073.jpg',
+      description: 'We are debugging top PCB and doing work. - Mar. 19, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0073.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0073.jpg'
+    }
+    ),
+    new Image(14, {
+      // modal, 3,9
+      img: '../../../assets/images/meets/DSC_0111.jpg',
+      description: 'We have a meeting discussing the next design and fixes. - Mar. 23, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0111.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0111.jpg'
+    }
+    ),
+    new Image(15, {
+      // modal, 3,9
+      img: '../../../assets/images/meets/DSC_0116.jpg',
+      description: 'Reviewing and fixing the top PCB. - Mar. 23, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0116.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0116.jpg'
+    }
+    ),
+    new Image(16, {
+      // modal, 3,9
+      img: '../../../assets/images/meets/DSC_0117.jpg',
+      description: 'Team manager finding new values for our sharp sensor\'\s new design. - Mar. 23, 2018',
+      extUrl: '../../../assets/images/meets/DSC_0117.jpg'
+    }, {
+      // plain
+      img: '../../../assets/images/meets/DSC_0117.jpg'
+    }
+    ),
+
+  ];
+
+
+  ReversedImage = this.AGimages.reverse();
+
+  constructor() {}
 
   ngOnInit() {
+    this.galleryOptions = [
+      {
+        width: '1080px',
+        height: '720px',
+        imagePercent: 100,
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Fade,
+        preview: false
+      }
+    ];
+
+    this.galleryImages = this.imagePopulate();
   }
+
+  imagePopulate() {
+    const imageURLs = [
+      {
+        small: '../../../assets/images/meets/DSC_7419.jpg',
+        medium: '../../../assets/images/meets/DSC_7419.jpg',
+        big: '../../../assets/images/meets/DSC_7419.jpg',
+        description: 'Our first meeting to planning victory. - Jan. 26, 2018',
+        thumbnailUrl: '../../../assets/images/meets/DSC_7419.jpg'
+      },
+      {
+        small: '../../../assets/images/meets/DSC_7421.jpg',
+        medium: '../../../assets/images/meets/DSC_7421.jpg',
+        big: '../../../assets/images/meets/DSC_7421.jpg',
+        description: 'Our first meeting with everyone. - Jan. 26, 2018'
+      },
+      {
+        small: '../../../assets/images/meets/DSC_7460.jpg',
+        medium: '../../../assets/images/meets/DSC_7460.jpg',
+        big: '../../../assets/images/meets/DSC_7460.jpg',
+        description:
+          'The meeting where we brainstorm our design and philosophy. - Feb. 2, 2018'
+      },
+      {
+        small:
+          'https://i.pximg.net/c/600x600/img-master/img/2016/10/09/02/23/02/59381593_p0_master1200.jpg',
+        medium:
+          'https://i.pximg.net/c/600x600/img-master/img/2016/10/09/02/23/02/59381593_p0_master1200.jpg',
+        big:
+          'https://i.pximg.net/c/600x600/img-master/img/2016/10/09/02/23/02/59381593_p0_master1200.jpg',
+        description:
+          'The meeting where we brainstorm our design and philosophy. - Feb. 2, 2018',
+        thumbnailUrl:
+          'https://i.pximg.net/c/600x600/img-master/img/2016/10/09/02/23/02/59381593_p0_master1200.jpg'
+      }
+    ];
+    return imageURLs;
+  }
+
 
 }

@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "app/_thirdParty/modal-extras.css";
+@import "app/_thirdParty/chatbot.css";
+
+
+.falcon_simple_white_bg {
+  padding: 2em 1em 1em 2em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.falcon_simple_black_bg {
+  padding: 2em 1em 1em 2em;
+  background: rgba(255, 255, 255, 0.97);
+  color: black;
+}
+
+.Fg-Fix {
+  opacity: 1;
+  z-index: 2;
+}
+
+.FZBg {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("./assets/images/static/FZero_Symbol.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  position: fixed;
+  height: 70px;
+  bottom: 0;
+  width: 100%;
+}
+
+.falcon-stickyfooter {
+  background: rgba(53, 0, 0, 0.8);
+  color: white;
+}
+
+.teamfalcon-magic-bg {
+  background: linear-gradient(
+    270deg,
+    #ffc7c7,
+    #ffe48f,
+    #d6ccff,
+    #ffccf2,
+    #ffffff
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: teamfalcon-magic-color 9s ease infinite;
+  -moz-animation: teamfalcon-magic-color 9s ease infinite;
+  animation: teamfalcon-magic-color 9s ease infinite;
+}
+
+@-webkit-keyframes teamfalcon-magic-color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes teamfalcon-magic-color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes teamfalcon-magic-color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

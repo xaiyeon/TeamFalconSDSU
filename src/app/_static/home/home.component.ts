@@ -10,6 +10,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const el = document.createElement('script');
+    el.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    document.body.appendChild(el);
   }
 
 }
