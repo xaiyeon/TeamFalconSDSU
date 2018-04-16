@@ -1,63 +1,81 @@
 <div class="fluid-container">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h3>Software</h3>
-            <p>At Team Falcon we decided to go with the Teensy 3.2 board because of the (MK20DX256) 32-bit ARM Cortex-M4 @72 MHz and additional prototyping on a PIC32MX6410B.
-                Respectively, the integrated development environment (IDE) used were Arduino Sketch and MPLAB by MicroChip. Both IDEs used the C programming language.
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h3>Software</h3>
+      <p>At Team Falcon we decided to go with the Teensy 3.2 board because of the (MK20DX256) 32-bit ARM Cortex-M4 @72 MHz and
+        additional prototyping on a PIC32MX130F064B. Respectively, the integrated development environment (IDE) used were
+        Arduino Sketch and MPLAB by MicroChip. Both IDEs used the C programming language.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 falcon-anim-bg">
+        <div class="falcon_simple_white_bg">
+          <h4>The Code</h4>
+          <p>We use a few libraries for faster prototyping. This gives us more time to program strategies and hasten development
+            process.
+          </p>
+        </div>
+        <br>
+        <div class="falcon_simple_white_bg">
+          <h4>How The Sensors Work:</h4>
+          <div class="row">
+            <div class="col-lg-6">
+              <p>First is the IR Receiver module, which will start our robot.</p>
+              <div class="img-fluid">
+                <img class="img-fluid" src="../../../assets/images/gifs/TOPS-IRRec-Gifv1.gif" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <p>Next are our edge sensors that will determine black or white ground.</p>
+              <div class="img-fluid">
+                <img class="img-fluid" src="../../../assets/images/gifs/EDGE-IR-Gifv2.gif" alt="">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <p>Then finally, we have the SHARP IR sensors for finding our enemy.</p>
+              <div class="img-fluid">
+                <img class="img-fluid" src="../../../assets/images/gifs/SHARP-IR_Side-Gifv2.gif" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h3>Sensor Data Analysis</h3>
+              <p>As you can see in the GIFs we based our robot design with the collected results from our sensors. This is essential because
+                we want to know what the ADC values would be based on the distance and situation. The data is then used to help code our robot modes and
+                strategies.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="falcon_black_white">
+            <h4>Our Strategy Into The Code:</h4>
+            <p>Our team thought of numerous strategies to try and take down our opponents. However, our opponents all had advantages over us and we tried
+              to cover all edge cases (such as in logic) to counter and outperform them. So we devised a way, thanks to using analog sensors, to defining and
+              programming different unique modes for the different opponent's robot.
             </p>
         </div>
-    </div>
-  
-    <div class="container">
 
-      <div class="row">
-          <div class="col-lg-12 falcon-anim-bg">
-              <div class="falcon_simple_white_bg">
-                    <h4>The Code</h4>
-                    <p>We use a few libraries for faster prototyping. This gives us more time to program strategies and hasten development process.</p>
-              </div>
-              <br>
-              <div class="falcon_simple_white_bg">
-                <h4>How the sensors work:</h4>
-                <p>First is the IR Receiver module, which will start our robot.</p>
-                <div class="img-fluid">
-                    <img class="img-fluid" src="../../../assets/images/gifs/TOPS-IRRec-Gifv1.gif" alt="">
-                </div>
-                <br>
-                <p>Next are our edge sensors that will determine black or white ground.</p>
-                <div class="img-fluid">
-                    <img class="img-fluid" src="../../../assets/images/gifs/EDGE-IR-Gifv1.gif" alt="">
-                </div>
-                <br>
-                <p>Then finally, we have the SHARP IR sensors for finding our enemy.</p>
-              </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>     
-              <br>
-              <br>
-              <br>
-              <br>     
-              <div class="card">
-                  <div class="card-body">
-                    <div id="chatBotCommandDescription"></div>
-                    <input id="humanInput" type="text" />
-                    <div id="chatBot">
-                        <div id="chatBotThinkingIndicator"></div>
-                        <div id="chatBotHistory"></div>
-                    </div>
-                  </div>
-              </div>      
-              <br>
+        <br>
+        <div class="card">
+          <div class="card-body">
+            <div id="chatBotCommandDescription"></div>
+            <input id="humanInput" type="text" />
+            <div id="chatBot">
+              <div id="chatBotThinkingIndicator"></div>
+              <div id="chatBotHistory"></div>
+            </div>
           </div>
-  
+        </div>
+        <br>
       </div>
+
     </div>
-  
   </div>
+
+</div>

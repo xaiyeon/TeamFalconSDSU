@@ -38,7 +38,7 @@ export class DesignComponent implements OnInit {
 
   plainGalleryGrid: PlainGalleryConfig = {
     strategy: PlainGalleryStrategy.GRID,
-    layout: new GridLayout({ width: '250px', height: 'auto' }, { length: 4, wrap: true })
+    layout: new GridLayout({ width: '12em', height: 'auto' }, { length: 4, wrap: true })
   };
 
 // From past to present, then reversed below.

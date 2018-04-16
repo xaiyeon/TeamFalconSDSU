@@ -5,12 +5,14 @@ import { HardwareComponent } from '../_static/hardware/hardware.component';
 import { SoftwareComponent } from '../_static/software/software.component';
 import { WorkComponent } from '../_static/work/work.component';
 import { AboutComponent } from '../_static/about/about.component';
+import { TournamentComponent } from '../_static/tournament/tournament.component';
 
 
 
 export const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent, data: { page: 'home' } },
+    {path: 'tournament', component: TournamentComponent, data: { page: 'tournament' } },
     {path: 'design', component: DesignComponent, data: { page: 'design' } },
     {path: 'hardware', component: HardwareComponent, data: { page: 'hardware' } },
     {path: 'software', component: SoftwareComponent, data: { page: 'software' } },

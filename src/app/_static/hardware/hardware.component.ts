@@ -27,10 +27,10 @@ export class HardwareComponent implements OnInit, AfterViewInit {
   data = {
     datasets: [
       {
-        data: [25, 37.90, 18, 11.36, 39.80, 17.90, 11.90, 9.98, 8.50, 10.50, 0.99, 0.75, 0.02, 2.50],
+        data: [25.00, 37.90, 18.00, 11.36, 39.80, 17.90, 11.90, 9.98, 8.50, 10.50, 0.99, 0.75, 0.02, 2.50, 3.99],
         backgroundColor: ['#FC1E1E', '#FCA51E', '#EFFC1E' , '#8FDA15',
           '#3FDA15' , '#1ABB5E', '#1AB8BB', '#1A68BB', '#231ABB', '#651ABB', '#BB1AB8'
-          , '#BB1A76', '#150309', '#450309'],
+          , '#BB1A76', '#150309', '#450309', '#251ABB'],
         fill: true
       }
     ],
@@ -39,7 +39,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
     labels: ['Microcontroller', 'Motors', 'Wheels', 'Battery', 'Sharp Sensors', 'Magnetic Encoder', 'Motor Drive', 'Motor Brackets',
                'QTR1-A Sensors'
               , 'Sensor Brackets', 'Battery Connector', 'Switch', 'PCB'
-              , 'IR Receiver']
+              , 'IR Receiver', 'SG90 Servo']
   };
 
   constructor(private modalService: BsModalService) {}
@@ -146,7 +146,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
 
       new hardwarePart(
         'SHARP IR Sensors',
-        4,
+        3,
         'Sharp GP2Y0A21YK0F Analog Distance Sensor',
         '../../../assets/images/parts/sharpDSC_0052.jpg',
         'Pricing, Specs, and Why',
@@ -162,7 +162,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
 
       new hardwarePart(
         'Magnetic Rotary Encoders',
-        2,
+        1,
         'Magnetic Encoder Pair Kit',
         '../../../assets/images/parts/encoderDSC_0049.jpg',
         'Pricing, Specs, and Why',
@@ -194,7 +194,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
 
       new hardwarePart(
         'Motor Brackets',
-        2,
+        1,
         'Micro Metal Gearmotor Bracket Pair',
         '../../../assets/images/parts/motorbracketsDSC_0051.jpg',
         'Pricing, Specs, and Why',
@@ -221,6 +221,22 @@ export class HardwareComponent implements OnInit, AfterViewInit {
         'Teensy 3.2',
         '../../../assets/images/parts/teensy3-2DSC_0055.jpg',
         'Really does know what an edge is of white or black.',
+        '#microcontroller'
+      ),
+
+      new hardwarePart(
+        'SG90 Micro Servo',
+        1,
+        'SG90 Mini Micro Servo',
+        '../../../assets/images/parts/servoDSC_0254.jpg',
+        'Pricing, Specs, and Why',
+        3.99,
+        'Dimension: approx 22*11.5*27mm. Simple and easy to use and is only 9 grams.',
+        'This servo will be one of our passive distractions.',
+        'microcontroller',
+        'Teensy 3.2',
+        '../../../assets/images/parts/servoDSC_0254.jpg',
+        'Even toy parts can serve a professional purpose.',
         '#microcontroller'
       ),
 

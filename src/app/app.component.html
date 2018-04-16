@@ -4,6 +4,16 @@
 </div>
 <div class="royce_wp">
   <router-outlet class="fg_fix"></router-outlet>
+  <go-top-button [animate]="true" [speed]="50" [acceleration]="2" [scrollDistance]="220" 
+  [styles]="{
+    'border-radius': '5px 5px 5px 5px',
+    'right': '10px',
+    'color': 'white',
+    'border': '5px solid',
+    'line-height': '20px'
+                 }">
+    <i class='fa fa-arrow-up' title='Fly To Top!'></i>
+  </go-top-button>
 </div>
 <br>
 <div class="teamfalcon-magic-bg">

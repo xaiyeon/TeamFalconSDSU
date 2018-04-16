@@ -2,19 +2,36 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h3>Design</h3>
-      <p>Here you will find our models and PCB (printed circuit board) layout.</p>
-      <p>At Team Falcon our design philosophy was to be like an actual falcon: powerful, fast, and tactful. Below are our
-            designs starting from the most recent to the first prototype ever.</p>
+      <p>Here you will find our block diagram, models, and PCB (printed circuit board) layout.</p>
+      <p>At Team Falcon our design philosophy was to be like an actual falcon: powerful, fast, and tactful.</p>
     </div>
   </div>
 
   <div class="container">
 
     <div class="row">
+      <div class="col-lg-3">
+        <div class="falcon_simple_white_bg">
+          <h4>Block Diagram</h4>
+          <p>Our block diagram that visually represents our robot on how it works altogether.</p>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class=" img-responsive simplediabg">
+          <img class="img-fluid" src="../../../assets/images/models/blockdia/block-diagram-v3.png" alt="">
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
       <div class="col-lg-12">
         <div class="falcon_simple_white_bg">
           <h4>Design Pictures</h4>
-          <p>Below are photos of various designs we created for our sumo robot.</p>
+          <p>Below are photos of various designs we created for our sumo robot:
+            starting from the most recent to the first prototype ever.</p>
         </div>
       </div>
     </div>
@@ -24,7 +41,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-            <ks-modal-gallery [plainGalleryConfig]="plainGalleryGrid" [modalImages]="ReversedImage" [slideConfig]="{infinite: true, sidePreviews: {show: true, size: {width: '100px', height: 'auto'}}}"></ks-modal-gallery>
+          <ks-modal-gallery [plainGalleryConfig]="plainGalleryGrid" [modalImages]="ReversedImage" [slideConfig]="{infinite: true, sidePreviews: {show: true, size: {width: '100px', height: 'auto'}}}"></ks-modal-gallery>
           <!-- <h4>Date: </h4>
           <p>This robot was our first prototype.</p>
         </div>
@@ -39,31 +56,28 @@
       <div class="col-lg-12">
         <div class="falcon_simple_white_bg">
           <h4>PCB Layout Design Pictures</h4>
-          <p>Below are photos of some PCB layouts we designed for putting components on for the sumo robot. Our PCBs are designed in EAGLE software.</p>
+          <p>Below are photos of some PCB layouts we designed for putting components on for the sumo robot. Our PCBs are designed
+            in EAGLE software.</p>
         </div>
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-lg-12">
-          <div class="falcon_design_magic">
-              <h4>Bottom PCB</h4>
-              <p>Revision #2</p>
-              <div class="img-responsive">
-                <img class="img-fluid" src="../../../assets/images/pcb/bottom_2rev3.JPG" alt="">
-              </div>
-              <br>
-              <h4>Top PCB</h4>
-              <p>Revision #3</p>
-              <div class="img-responsive">
-                <img class="img-fluid" src="../../../assets/images/pcb/top2rev3.JPG" alt="">
-              </div>
-              <br>
-              <p>Revision #2</p>
-              <div class="img-responsive">
-                <img class="img-fluid" src="../../../assets/images/pcb/top2rev2.JPG" alt="">
-              </div>
+        <div class="falcon_design_magic">
+          <h4>Bottom PCB</h4>
+          <p>Revision #2</p>
+          <div class="img-responsive">
+            <img class="img-fluid" src="../../../assets/images/pcb/bottom_2rev3.JPG" alt="">
           </div>
+          <hr>
+          <h4>Top PCB</h4>
+          <p>Revision #2</p>
+          <div class="img-responsive">
+            <img class="img-fluid" src="../../../assets/images/pcb/top2rev3.JPG" alt="">
+          </div>
+          <br>
+        </div>
       </div>
     </div>
 
