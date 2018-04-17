@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { teamInfo } from './teamInfo';
 
 @Component({
   selector: 'app-tournament',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tournament.component.scss']
 })
 export class TournamentComponent implements OnInit {
+  AllTeam: teamInfo;
+
 
   constructor() { }
 
