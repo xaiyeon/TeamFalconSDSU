@@ -164,6 +164,36 @@ new Image(3, {
     img: '../../../assets/images/models/actual/DSC_0074.jpg'
   }
   ),
+  new Image(11, {
+    // modal, 3,5
+    img: '../../../assets/images/models/end-proto/design3a.png',
+    description: 'Our amazing new 3d design!',
+    extUrl: '../../../assets/images/models/end-proto/design3a.png'
+  }, {
+    // plain
+    img: '../../../assets/images/models/end-proto/design3a.png'
+  }
+  ),
+  new Image(12, {
+    // modal, 3,5
+    img: '../../../assets/images/models/end-proto/design3b.png',
+    description: 'Our amazing new 3d design!.',
+    extUrl: '../../../assets/images/models/end-proto/design3b.png'
+  }, {
+    // plain
+    img: '../../../assets/images/models/end-proto/design3b.png'
+  }
+  ),
+  new Image(13, {
+    // modal, 3,5
+    img: '../../../assets/images/models/end-proto/design3c.png',
+    description: 'Our amazing new 3d design!.',
+    extUrl: '../../../assets/images/models/end-proto/design3c.png'
+  }, {
+    // plain
+    img: '../../../assets/images/models/end-proto/design3c.png'
+  }
+  ),
 ];
 
 

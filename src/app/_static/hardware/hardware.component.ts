@@ -99,7 +99,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
       new hardwarePart(
         'DC Motors',
         2,
-        '50:1 Micro Metal Gearmotor HP 6V',
+        '50:1 Micro Metal Gearmotor HP 6V w/Extended Motor Shaft',
         '../../../assets/images/parts/motorsDSC_0048.jpg',
         'Pricing, Specs, and Why',
         18.95,

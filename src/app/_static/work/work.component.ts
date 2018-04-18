@@ -313,7 +313,57 @@ export class WorkComponent implements OnInit, AfterViewInit {
         img: '../../../assets/images/meets/DSC_0215.jpg'
       }
       ),
-
+      // new things
+      new Image(24, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0240.jpg',
+        description: 'Three musketeers. - Apr. 11, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0240.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0240.jpg'
+      }
+      ),
+      new Image(25, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0245.jpg',
+        description: 'Using flux all day. - Apr. 12, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0245.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0245.jpg'
+      }
+      ),
+      new Image(26, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0248.jpg',
+        description: 'Photo inception. - Apr. 12, 2018',
+        extUrl: '../../../assets/images/img/work/DSC_0248.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0248.jpg'
+      }
+      ),
+      new Image(27, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0250.jpg',
+        description: 'Fresh bro with the robot. - Apr. 12, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0250.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0250.jpg'
+      }
+      ),
+      new Image(28, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/team_meeting_apr_16.jpg',
+        description: 'Team meeting outside on beautiful terrace of SDSU EIS. (Royce did not take this photo.) - Apr. 16, 2018',
+        extUrl: '../../../assets/images/work/img/team_meeting_apr_16.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/team_meeting_apr_16.jpg'
+      }
+      ),
     ];
 
     this.ReversedImage = this.AGimages.reverse();

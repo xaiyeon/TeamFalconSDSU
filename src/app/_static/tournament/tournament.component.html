@@ -2,7 +2,7 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h3>Tournament</h3>
-      <p>The San Diego State University Sumo Robot Tournament consist of seven teams competing for graduation with the grand
+      <p>The San Diego State University Sumo Robot Tournament consist of seven teams (including Team Falcon) competing for graduation with the grand
         prize of being the best engineers in the Electrical and Computer Engineering Department!
       </p>
     </div>
@@ -30,7 +30,7 @@
                   </a>
                 </div>
                 <div class="float-right">
-                  <button class="btn btn-info">More!</button>
+                  <button class="btn btn-info" (click)="teamYoko($event)">More!</button>
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@
               <div class="card-body">
                 <p class="card-text text-center tourbold">
                   <b class="text-center" style="color: red">
-                  <i class="fa fa-spoon"></i>  AZTECHS</b>
+                    <i class="fa fa-spoon"></i> AZTECHS</b>
                 </p>
                 <div class="img-fluid tournament_cover_img">
                   <div id="az_bg">
@@ -54,7 +54,7 @@
                   </a>
                 </div>
                 <div class="float-right">
-                  <button class="btn btn-info">More!</button>
+                  <button class="btn btn-info" (click)="teamAZ($event)">More!</button>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@
               <div class="card-body">
                 <p class="card-text text-center tourbold">
                   <b class="text-center">
-                      <i class="fa fa-lightbulb-o"></i>   CIRCUIT BREAKERS</b>
+                    <i class="fa fa-lightbulb-o"></i> CIRCUIT BREAKERS</b>
                 </p>
                 <div class="img-fluid tournament_cover_img">
                   <div id="cb_bg">
@@ -80,7 +80,7 @@
                   </a>
                 </div>
                 <div class="float-right">
-                  <button class="btn btn-info">More!</button>
+                  <button class="btn btn-info" (click)="teamCB($event)">More!</button>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@
               <div class="card-body">
                 <p class="card-text text-center tourbold">
                   <b class="text-center">
-                      <i class="fa fa-plus-square-o"></i>  SQUARE UP</b>
+                    <i class="fa fa-plus-square-o"></i> SQUARE UP</b>
                 </p>
                 <div class="img-fluid tournament_cover_img">
                   <div id="su_bg">
@@ -104,7 +104,7 @@
                   </a>
                 </div>
                 <div class="float-right">
-                  <button class="btn btn-info">More!</button>
+                  <button class="btn btn-info" (click)="teamSU($event)">More!</button>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@
               <div class="card-body">
                 <p class="card-text text-center tourbold">
                   <b class="text-center" style="color:rgb(221, 29, 61)">
-                      <i class="fa fa-mercury"></i> ABIGAIL</b>
+                    <i class="fa fa-mercury"></i> ABIGAIL</b>
                 </p>
                 <div class="img-fluid tournament_cover_img">
                   <div id="abi_bg">
@@ -131,7 +131,7 @@
                   </a>
                 </div>
                 <div class="float-right">
-                  <button class="btn btn-info">More!</button>
+                  <button class="btn btn-info" (click)="teamA($event)">More!</button>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@
               <div class="card-body">
                 <p class="card-text text-center tourbold">
                   <b class="text-center">
-                      <i class="fa fa-snowflake-o"></i> PRJCT AFK</b>
+                    <i class="fa fa-snowflake-o"></i> PRJCT AFK</b>
                 </p>
                 <div class="img-fluid tournament_cover_img">
                   <div id="prafk_bg">
@@ -155,7 +155,7 @@
                   </a>
                 </div>
                 <div class="float-right">
-                  <button class="btn btn-info">More!</button>
+                  <button class="btn btn-info" (click)="teamAFK($event)">More!</button>
                 </div>
               </div>
             </div>
@@ -165,8 +165,21 @@
       </div>
 
       <div class="col-lg-4 falcon_simple_white_bg">
-        <h3>{{ this.AllTeam.teams[1].name }}</h3>
-        <p>Click on More!</p>
+        <p class="text-center">Click on More!</p>
+        <div class="d-flex text-center">
+          <div class="h3 " style="float: left;">{{ this.AllTeam.teams[this.teamNumber].Name }} </div>
+          <div class="h5 "  style="float: left;">({{ this.AllTeam.teams[this.teamNumber].MemberCount }} members)</div>      
+        </div>
+        <div class="h6 text-center" >{{ this.AllTeam.teams[this.teamNumber].Description }}</div>
+        <hr>
+        <div *ngFor="let teamperson of AllTeam.teams[this.teamNumber].Members">
+          <p>
+            <i class="fa fa-id-card-o"></i>> <b>{{ teamperson.Name }}</b> | {{ teamperson.Major }}
+          </p>
+          <p style="padding-left: 2em;">
+            Role: {{ teamperson.Description }}
+          </p>
+        </div>
 
       </div>
 
