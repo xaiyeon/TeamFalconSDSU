@@ -24,7 +24,7 @@
           </h4>
           <span>
             <p>Here is our first proposal draft for our project:</p>
-            <a href="../../../assets/documents/proposals/Team_Falcon_RoughDraf-Proposal_v1.0.0.pdf">First Draft</a>
+            <a target="_blank" href="../../../assets/documents/proposals/Team_Falcon_RoughDraf-Proposal_v1.0.0.pdf">First Draft</a>
           </span>
           <hr>
         </div>
@@ -34,6 +34,36 @@
             Videos
           </h4>
           <p>Below are some short videos of our progress.</p>
+          <ul>
+            <li *ngFor="let video of VideoArray;">
+              <button type="button" class="btn btn-info" style="color: black;" (click)="openModal(modalOpen)">
+                {{ video.Name }}
+              </button>
+              <ng-template #modalOpen>
+                <div class="modal-header">
+                  <h4 class="modal-title pull-left">{{ video.Name }}</h4>
+                  <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="left">
+                    <video class="embed-responsive embed-responsive-16by9" style="max-height: 35rem" controls>
+                      <source src="{{ video.url }}" type="video/mp4"> Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                  <div class="right">
+                    <br>
+                    <h5>
+                      <a target="_blank" href="{{ video.url }}">{{ video.Description }}</a>
+                    </h5>
+                  </div>
+                </div>
+              </ng-template>
+
+            </li>
+          </ul>
+
         </div>
         <div class="falcon_simple_white_bg">
           <h4>
@@ -45,18 +75,12 @@
       </div>
       <div class="col-lg-6 falcon_simple_white_bg">
         <div>
-            <div class="text-center d-flex">
-                <pagination 
-                [directionLinks]="true"
-                [boundaryLinks]="true" 
-                [totalItems]="AGimages.length"  
-                [itemsPerPage]="itemsPerPage"
-                [(ngModel)]="currentPage"
-                (pageChanged)="pageChanged($event)" 
-                 class="pagination pagination-lg text-center d-flex" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;"
-                  lastText="&raquo;">
-                </pagination>
-              </div>
+          <div class="text-center d-flex">
+            <pagination [directionLinks]="true" [boundaryLinks]="true" [totalItems]="AGimages.length" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage"
+              (pageChanged)="pageChanged($event)" class="pagination pagination-lg text-center d-flex" previousText="&lsaquo;"
+              nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+            </pagination>
+          </div>
           <ks-modal-gallery [plainGalleryConfig]="plainGalleryColumn" [modalImages]="PaginationImages" [slideConfig]="{infinite: true, sidePreviews: {show: true, size: {width: '100px', height: 'auto'}}}"></ks-modal-gallery>
           <br>
         </div>

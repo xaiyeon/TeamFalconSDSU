@@ -1,4 +1,4 @@
-<div class="fluid-container">
+<div class="fluid-container overwriteBG">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h3>Tournament</h3>
@@ -174,7 +174,7 @@
         <hr>
         <div *ngFor="let teamperson of AllTeam.teams[this.teamNumber].Members">
           <p>
-            <i class="fa fa-id-card-o"></i>> <b>{{ teamperson.Name }}</b> | {{ teamperson.Major }}
+            <i class="fa fa-id-card-o"></i>> <b [style.color]="teamperson.Style">{{ teamperson.Name }}</b> | {{ teamperson.Major }}
           </p>
           <p style="padding-left: 2em;">
             Role: {{ teamperson.Description }}

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, TemplateRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { NgxImageGalleryComponent, GALLERY_IMAGE, GALLERY_CONF } from 'ngx-image-gallery';
@@ -30,12 +30,20 @@ import {
 
 import { ModalGalleryModule } from 'angular-modal-gallery';
 
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { workVideo } from '../../_models/workvideo';
+
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit, AfterViewInit {
+  modalRef: BsModalRef;
+
+  VideoArray: workVideo[];
+
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
@@ -70,8 +78,12 @@ export class WorkComponent implements OnInit, AfterViewInit {
   AGimages: Image[];
   ReversedImage: any;
 
-  constructor() {
+  constructor(private modalService: BsModalService) {
     
+    this.VideoArray = [
+      new workVideo('Early Prototype Test', '../../../assets/videos/MOV_0015_h264.mp4', 'Testing out the baby...')
+    ];
+
     this.AGimages = [
       new Image(0, {
           // modal
@@ -390,6 +402,11 @@ export class WorkComponent implements OnInit, AfterViewInit {
     console.log('ngAfterViewInit');
 
   }
+
+// for videos
+openModal(template: TemplateRef<any>) {
+  this.modalRef = this.modalService.show(template);
+}
 
   pageChanged(event: any): void {
     this.page = event.page;

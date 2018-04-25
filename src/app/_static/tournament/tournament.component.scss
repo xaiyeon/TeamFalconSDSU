@@ -1,95 +1,112 @@
-.tournament_teambg1{
-    border: 1px solid #000;
+.overwriteBG {
+  background: url("../../../assets/images/static/DSC07047_e.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.tournament_teambg1::after{
-    width: 100%;
-    height: 100%;
+.tournament_teambg1 {
+  border: 1px solid #000;
 }
 
-.tournament_cover_img{
-    border-top: 5px solid rgb(228, 69, 69);
-    width: auto;
-    border-bottom: 5px solid rgb(26, 128, 187);
+.tournament_teambg1::after {
+  width: 100%;
+  height: 100%;
 }
 
-.tourbold{
-    font-size: 1.1em;
-    font-weight: bolder;
-    color: black;
+.tournament_cover_img {
+  border-top: 5px solid rgb(228, 69, 69);
+  width: auto;
+  border-bottom: 5px solid rgb(26, 128, 187);
+}
+
+.tourbold {
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: black;
 }
 
 .yokozoom_title {
-    font-size: 1.1em;
-    font-weight: bolder;
-    color: black;
-    animation: rainbow 3s infinite;
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: black;
+  animation: rainbow 3s infinite;
 }
 
 @keyframes rainbow {
-    0%   {color: rgb(204, 20, 20);}
-    15%  {color: rgb(0, 180, 75);}
-    25%  {color: rgb(187, 187, 11);}
-    35%  {color: rgb(28, 28, 168);}
-    50%  {color: rgb(160, 14, 160);}
-    75%  {color: rgb(14, 126, 160);}
-    100% {color: rgb(187, 135, 39);}
+  0% {
+    color: rgb(204, 20, 20);
+  }
+  15% {
+    color: rgb(0, 180, 75);
+  }
+  25% {
+    color: rgb(187, 187, 11);
+  }
+  35% {
+    color: rgb(28, 28, 168);
+  }
+  50% {
+    color: rgb(160, 14, 160);
+  }
+  75% {
+    color: rgb(14, 126, 160);
+  }
+  100% {
+    color: rgb(187, 135, 39);
+  }
 }
-
 
 // teams below
 #yokozoom_bg {
-    background-image: url("../../../assets/images/other_team/yokozoombot_logo.JPG");
-    min-height: 96%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../../assets/images/other_team/yokozoombot_logo.JPG");
+  min-height: 96%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #az_bg {
-    background-image: url("../../../assets/images/other_team/aztechs_logo.JPG");
-    min-height: 96%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../../assets/images/other_team/aztechs_logo.JPG");
+  min-height: 96%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #cb_bg {
-    background-image: url("../../../assets/images/other_team/circuit_breakers_logo.JPG");
-    min-height: 96%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../../assets/images/other_team/circuit_breakers_logo.JPG");
+  min-height: 96%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #su_bg {
-    background-image: url("../../../assets/images/other_team/square_up_logo.JPG");
-    min-height: 96%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../../assets/images/other_team/square_up_logo.JPG");
+  min-height: 96%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-
 #abi_bg {
-    background-image: url("../../../assets/images/other_team/team_abigail_logo.JPG");
-    min-height: 96%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../../assets/images/other_team/team_abigail_logo.JPG");
+  min-height: 96%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #prafk_bg {
-    background-image: url("../../../assets/images/other_team/prjct_afk_logo.JPG");
-    min-height: 96%;
-    height: 80px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url("../../../assets/images/other_team/prjct_afk_logo.JPG");
+  min-height: 96%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-

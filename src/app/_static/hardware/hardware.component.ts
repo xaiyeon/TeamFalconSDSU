@@ -27,7 +27,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
   data = {
     datasets: [
       {
-        data: [25.00, 37.90, 18.00, 11.36, 39.80, 17.90, 11.90, 9.98, 8.50, 10.50, 0.99, 0.75, 0.02, 2.50, 3.99],
+        data: [25.00, 37.90, 18.00, 11.36, 39.80, 8.95, 11.90, 4.99, 8.50, 0.99, 0.75, 0.02, 2.50, 3.99],
         backgroundColor: ['#FC1E1E', '#FCA51E', '#EFFC1E' , '#8FDA15',
           '#3FDA15' , '#1ABB5E', '#1AB8BB', '#1A68BB', '#231ABB', '#651ABB', '#BB1AB8'
           , '#BB1A76', '#150309', '#450309', '#251ABB'],
@@ -38,7 +38,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: ['Microcontroller', 'Motors', 'Wheels', 'Battery', 'Sharp Sensors', 'Magnetic Encoder', 'Motor Drive', 'Motor Brackets',
                'QTR1-A Sensors'
-              , 'Sensor Brackets', 'Battery Connector', 'Switch', 'PCB'
+              , 'Battery Connector', 'Switch', 'PCB'
               , 'IR Receiver', 'SG90 Servo']
   };
 
@@ -87,7 +87,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
         '../../../assets/images/parts/teensy3-2DSC_0055.jpg',
         'Pricing, Specs, and Why',
         25,
-        'Max CPU Freq: 120 MHz',
+        'Max CPU Freq: ~90 - 120 MHz',
         'It is not bad for the price and it gives use more time to think about strategies and quicken development.',
         'microcontroller',
         'Teensy 3.2',
@@ -240,21 +240,21 @@ export class HardwareComponent implements OnInit, AfterViewInit {
         '#microcontroller'
       ),
 
-      new hardwarePart(
-        'Sensor Brackets',
-        3,
-        'Sharp Sensor Bracket Perpendicular',
-        '../../../assets/images/parts/perp_brack_DSC_0113.jpg',
-        'Pricing, Specs, and Why',
-        3.51,
-        'Lightweight, about 1.5g',
-        'These lightweight aluminum brackets make it easy to mount and integrate the Sharp Distance Sensors',
-        'microcontroller',
-        'Teensy 3.2',
-        '../../../assets/images/parts/perp_brack_DSC_0113.jpg',
-        'Makes sure our sensors do not fall out.',
-        '#microcontroller'
-      ),
+      // new hardwarePart(
+      //   'Sensor Brackets',
+      //   3,
+      //   'Sharp Sensor Bracket Perpendicular',
+      //   '../../../assets/images/parts/perp_brack_DSC_0113.jpg',
+      //   'Pricing, Specs, and Why',
+      //   3.51,
+      //   'Lightweight, about 1.5g',
+      //   'These lightweight aluminum brackets make it easy to mount and integrate the Sharp Distance Sensors',
+      //   'microcontroller',
+      //   'Teensy 3.2',
+      //   '../../../assets/images/parts/perp_brack_DSC_0113.jpg',
+      //   'Makes sure our sensors do not fall out.',
+      //   '#microcontroller'
+      // ),
 
       new hardwarePart(
         'IR Remote Receiver',
