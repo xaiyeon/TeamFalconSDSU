@@ -81,7 +81,8 @@ export class WorkComponent implements OnInit, AfterViewInit {
   constructor(private modalService: BsModalService) {
     
     this.VideoArray = [
-      new workVideo('Early Prototype Test', '../../../assets/videos/MOV_0015_h264.mp4', 'Testing out the baby...')
+      new workVideo('Early Prototype Test', '../../../assets/videos/MOV_0015_h264.mp4', 'Testing out the baby...'),
+      new workVideo('Prototype Pushing Test', '../../../assets/videos/vid_81260101_145032_833.mp4', 'That is a box of metal.')
     ];
 
     this.AGimages = [
