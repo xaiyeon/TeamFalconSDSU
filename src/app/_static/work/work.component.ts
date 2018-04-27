@@ -376,6 +376,36 @@ export class WorkComponent implements OnInit, AfterViewInit {
         img: '../../../assets/images/work/img/team_meeting_apr_16.jpg'
       }
       ),
+      new Image(29, {
+        // modal, 3,9
+        img: '../../../assets/images/meets/Final/IMG_5725.jpg',
+        description: 'Last minute soldering. (Taken by Aziz.) - Apr. 23, 2018',
+        extUrl: '../../../assets/images/meets/Final/IMG_5725.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/meets/Final/IMG_5725.jpg'
+      }
+      ),
+      new Image(30, {
+        // modal, 3,9
+        img: '../../../assets/images/meets/Final/IMG_5749.jpg',
+        description: 'The smile of defeat. (Taken by Aziz.) - Apr. 23, 2018',
+        extUrl: '../../../assets/images/meets/Final/IMG_5749.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/meets/Final/IMG_5749.jpg'
+      }
+      ),    
+      new Image(31, {
+        // modal, 3,9
+        img: '../../../assets/images/meets/Final/IMG_5760.jpg',
+        description: 'It worked for a good ten seconds. (Taken by Aziz.) - Apr. 23, 2018',
+        extUrl: '../../../assets/images/meets/Final/IMG_5760.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/meets/Final/IMG_5760.jpg'
+      }
+      ),            
     ];
 
     this.ReversedImage = this.AGimages.reverse();
