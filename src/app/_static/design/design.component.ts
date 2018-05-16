@@ -194,6 +194,46 @@ new Image(3, {
     img: '../../../assets/images/models/end-proto/design3c.png'
   }
   ),
+  new Image(14, {
+    // modal, 3,5
+    img: '../../../assets/images/models/actual/DSC_0298.jpg',
+    description: 'Kind of fits.',
+    extUrl: '../../../assets/images/models/actual/DSC_0298.jpg'
+  }, {
+    // plain
+    img: '../../../assets/images/models/actual/DSC_0298.jpg'
+  }
+  ),
+  new Image(15, {
+    // modal, 3,5
+    img: '../../../assets/images/models/actual/DSC_0300.jpg',
+    description: 'Very light.',
+    extUrl: '../../../assets/images/models/actual/DSC_0300.jpg'
+  }, {
+    // plain
+    img: '../../../assets/images/models/actual/DSC_0300.jpg'
+  }
+  ),
+  new Image(16, {
+    // modal, 3,5
+    img: '../../../assets/images/models/actual/DSC_0313.jpg',
+    description: 'A painting.',
+    extUrl: '../../../assets/images/models/actual/DSC_0313.jpg'
+  }, {
+    // plain
+    img: '../../../assets/images/models/actual/DSC_0313.jpg'
+  }
+  ),
+  new Image(17, {
+    // modal, 3,5
+    img: '../../../assets/images/models/actual/DSC_0320.jpg',
+    description: 'Added metal blocks and it\'s a cat.',
+    extUrl: '../../../assets/images/models/actual/DSC_0320.jpg'
+  }, {
+    // plain
+    img: '../../../assets/images/models/actual/DSC_0320.jpg'
+  }
+  ),      
 ];
 
 

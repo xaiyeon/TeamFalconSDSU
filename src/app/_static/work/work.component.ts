@@ -82,7 +82,11 @@ export class WorkComponent implements OnInit, AfterViewInit {
     
     this.VideoArray = [
       new workVideo('Early Prototype Test', '../../../assets/videos/MOV_0015_h264.mp4', 'Testing out the baby...'),
-      new workVideo('Prototype Pushing Test', '../../../assets/videos/vid_81260101_145032_833.mp4', 'That is a box of metal.')
+      new workVideo('Prototype Pushing Test', '../../../assets/videos/vid_81260101_145032_833.mp4', 'That is a box of metal.'),
+      new workVideo('Demonstration', '../../../assets/videos/MOV_0305.mp4', '1 Day before.'),
+      new workVideo('Ring Testing', '../../../assets/videos/MOV_0315.mp4', 'It seems to work.'),
+      new workVideo('First Skirmish', '../../../assets/videos/MOV_0316.mp4', 'At least it did something.'),
+      new workVideo('Final Working Build', '../../../assets/videos/IMG_1871_moving.mp4', 'Going around the Dohyo (yes that is duct-tape).')
     ];
 
     this.AGimages = [
@@ -406,7 +410,57 @@ export class WorkComponent implements OnInit, AfterViewInit {
         // plain
         img: '../../../assets/images/meets/Final/IMG_5760.jpg'
       }
-      ),            
+      ),       
+      new Image(32, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0281.jpg',
+        description: 'Using Mark\'s office tools" - Apr. 24, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0281.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0281.jpg'
+      }
+      ), 
+      new Image(33, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0283.jpg',
+        description: 'Trying to get it to work. - Apr. 25, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0283.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0283.jpg'
+      }
+      ), 
+      new Image(34, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0297.jpg',
+        description: 'Drilling makeshift metals to make something. - Apr. 27, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0297.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0297.jpg'
+      }
+      ),  
+      new Image(35, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/DSC_0318.jpg',
+        description: 'Maybe it works, maybe it doesn\'t. At least we got something! - Apr. 30, 2018',
+        extUrl: '../../../assets/images/work/img/DSC_0318.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/DSC_0318.jpg'
+      }
+      ),     
+      new Image(36, {
+        // modal, 3,9
+        img: '../../../assets/images/work/img/design_day_20180502_152902.jpg',
+        description: 'Our booth on design day. - May 2, 2018',
+        extUrl: '../../../assets/images/work/img/design_day_20180502_152902.jpg'
+      }, {
+        // plain
+        img: '../../../assets/images/work/img/design_day_20180502_152902.jpg'
+      }
+      ),     
     ];
 
     this.ReversedImage = this.AGimages.reverse();

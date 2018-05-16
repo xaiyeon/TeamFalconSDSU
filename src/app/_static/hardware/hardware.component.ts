@@ -27,7 +27,7 @@ export class HardwareComponent implements OnInit, AfterViewInit {
   data = {
     datasets: [
       {
-        data: [25.00, 37.90, 18.00, 11.36, 39.80, 8.95, 11.90, 4.99, 8.50, 0.99, 0.75, 0.02, 2.50, 3.99],
+        data: [25.00, 37.90, 18.00, 11.00, 39.80, 8.95, 11.90, 4.99, 8.50, 0.99, 0.75, 0.02, 2.50, 3.99],
         backgroundColor: ['#FC1E1E', '#FCA51E', '#EFFC1E' , '#8FDA15',
           '#3FDA15' , '#1ABB5E', '#1AB8BB', '#1A68BB', '#231ABB', '#651ABB', '#BB1AB8'
           , '#BB1A76', '#150309', '#450309', '#251ABB'],
@@ -131,15 +131,15 @@ export class HardwareComponent implements OnInit, AfterViewInit {
       new hardwarePart(
         'Battery',
         1,
-        'Gens ace 7.4V 1000mAh LiPo Battery',
-        '../../../assets/images/parts/batteryandConnectorDSC_0070.jpg',
+        'GAONENG GNB 7.4V 600mAh 2S 50C Lipo Battery XT30 Plug',
+        '../../../assets/images/parts/NewBattery.jpg',
         'Pricing, Specs, and Why',
-        11.36,
-        'Dims: 5.2 x 2 x 2 inches',
-        'Quickly Recharged, long cycle life (150 times minimum), up to 200Wh/kg energy densit',
-        'microcontroller',
-        'Teensy 3.2',
-        '../../../assets/images/parts/batteryandConnectorDSC_0070.jpg',
+        11.00,
+        'Dims: 48mm * 24mm * 15mm',
+        'Quickly Recharged, very small and compact battery.',
+        'Battery',
+        'GAONENG GNB 7.4V 600mAh 2S 50C Lipo Battery XT30 Plug',
+        '../../../assets/images/parts/NewBattery.jpg',
         'A built in Pikachu for days.',
         '#microcontroller'
       ),

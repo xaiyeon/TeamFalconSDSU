@@ -38,21 +38,21 @@ export class teamInfo {
                 'Hip hip hooray!'
             ),
             new Team('Circuit Breakers', 6,
-                [new People('Jefferey Teixeira', '', 'n/a', 'Project Manager', ''),
-                new People('Jeff Presar', '', 'n/a', 'n/a', ''),
+                [new People('Jefferey Teixeira', '', ee, 'Project Manager', ''),
+                new People('Jeff Presar', '', ce, 'n/a', ''),
                 new People('Janpaul Alamani', '', ce, 'n/a', ''),
-                new People('Blake Caudle', '', 'n/a', 'n/a', ''),
-                new People('Gerard Laconsay', '', 'n/a', 'n/a', ''),
-                new People('Juan Manuel Gutierrez', '', 'n/a', 'n/a', '')
+                new People('Blake Caudle', '', ce, 'n/a', ''),
+                new People('Gerard Laconsay', '', ce, 'n/a', ''),
+                new People('Juan Manuel Gutierrez', '', ce, 'n/a', '')
                 ],
                 'C-C-Combo- Circuit Breaker!'
             ),
             new Team('Square Up', 6,
-                [new People('TBA', '', ee, 'Project Manager', ''),
-                new People('TBA', '', ee, 'n/a', ''),
-                new People('TBA', '', ee, 'n/a', ''),
-                new People('TBA', '', ee, 'n/a', ''),
-                new People('TBA', '', 'n/a', 'n/a', ''),
+                [new People('Cody Frizsell', '', ce, 'Project Manager', ''),
+                new People('Ivan Chavez', '', ee, 'Presentation Coordinator', ''),
+                new People('Janrel Leano', '', ee, 'Report Editor', ''),
+                new People('Andrew Cintora', '', ce, 'Parts Manager', ''),
+                new People('Nhi Lam', '', ce, 'Repository Manager', ''),
                 new People('Vincent Chan', '', ce, 'Web Designer', '')
                 ],
                 'Champions of the parking lot!'
